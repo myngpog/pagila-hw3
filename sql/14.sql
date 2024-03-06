@@ -9,7 +9,7 @@
  */
 
 SELECT c.name, r.title, r."total rentals" AS "total rentals"
--- FROM category c
+FROM category c
 LEFT JOIN LATERAL (
     SELECT t.title, t.film_id, t.count as "total rentals"
     -- get top rental count of film
